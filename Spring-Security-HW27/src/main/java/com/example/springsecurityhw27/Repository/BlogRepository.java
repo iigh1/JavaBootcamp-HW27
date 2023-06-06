@@ -11,7 +11,7 @@ import java.util.List;
 @Repository
 public interface BlogRepository extends JpaRepository<Blog,Integer> {
 
-    List<Blog> findAllByUser(MyUser myUser);
+    List<Blog> findAllByMyUser(MyUser myUser);
 
     Blog findBlogById(Integer id);
 
