@@ -59,9 +59,6 @@ public class BlogService {
         if (blog1==null){
             throw  new ApiException("Blog not found");
         }
-        if (blog1.getMyUser() != myUser){
-            throw new ApiException("Error, not authorized");
-        }
         return blog1;
 
     }
@@ -70,9 +67,6 @@ public class BlogService {
         Blog blog1=blogRepository.findBlogByTitle(title);
         if (blog1==null){
             throw  new ApiException("Blog not found");
-        }
-        if (blog1.getMyUser() != myUser){
-            throw new ApiException("Error, not authorized");
         }
         return blog1;
 
